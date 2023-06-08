@@ -1,0 +1,499 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url("https://fonts.googleapis.com/css?family=IBM Plex Mono");
+
+:root {
+    --light-lilac: #57659F;
+    --lilac: #8FA7FD;
+    --lime: #CEF870;
+    --light-aubergine: #1A1D38;
+    --hover-aubergine: #202340;
+    --aubergine: #121528;
+    --dark-aubergine: #0A0C16;
+    --pink: #FF8383;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--aubergine);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    font-family: 'Satoshi', sans-serif;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+::placeholder {
+    color: var(--light-lilac);
+    opacity: .5;
+}
+
+.IBM {
+    font-family: 'IBM Plex Mono', sans-serif;
+    letter-spacing: .24rem;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.light-weight {
+    font-weight: 400;
+}
+
+.heavy-weight {
+    font-weight: 500;
+}
+
+.font-1 {
+    font-size: .875rem;
+    line-height: 1.125rem;
+}
+
+.font-2 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.font-3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin: 2.5rem 0 1rem 0;
+}
+
+.font-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hover-aubergine:hover {
+    background-color: var(--hover-aubergine);
+}
+
+.header {
+    height: 4rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.75rem;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    width: 2rem;
+    height: .2rem;
+    background: var(--lilac);
+}
+
+.menu-button::before,
+.menu-button::after {
+    content: '';
+    position: absolute;
+}
+
+.menu-button::before {
+    transform: translateY(-.65rem);
+}
+
+.menu-button::after {
+    transform: translateY(.65rem);
+}
+
+.menu.open .menu-button {
+    transform: rotate(45deg);
+}
+
+.menu.open .menu-button::before,
+.menu.open .menu-button::after {
+    transform: translateY(0);
+    transform: rotate(-90deg);
+}
+
+.work-title::before {
+    content: "Hey! ";
+    color: var(--lime);
+}
+
+.work-title {
+    color: var(--lilac);
+    text-align: center;
+    margin: 2.5rem 2.5rem 2.125rem;
+}
+
+.star::after {
+    content: " * ";
+}
+
+.label {
+    color: var(--lime);
+    margin-left: 1.5rem;
+}
+
+.option.selected {
+    color: var(--lime);
+    outline: 2px solid var(--lime);
+}
+
+.field {
+    background: var(--light-aubergine);
+    color: var(--lilac);
+    border: 1px solid var(--light-lilac);
+    border-radius: 1000px;
+    resize: none;
+    width: 98%;
+    padding: .5rem 1.5rem;
+    margin: .5rem .5rem 2rem .5rem;
+}
+
+.field:focus,
+.active {
+    outline: 2px solid var(--lilac);
+    box-shadow: 5px var(--lilac);
+}
+
+.option {
+    color: var(--lilac);
+    border: 1px solid var(--light-lilac);
+    background: var(--light-aubergine);
+    border-radius: 1000px;
+    display: inline-block;
+    padding: .8rem 1rem;
+    margin: .5rem .25rem;
+}
+
+#services-section {
+    margin: 3rem 0 5rem 0;
+}
+
+#verify-submit-section {
+    text-align: center;
+}
+
+.verify-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -.35rem 0 2.625rem 0;
+}
+
+#checkbox {
+    margin: 0;
+    appearance: none;
+    color: var(--light-aubergine);
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--light-lilac);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+#checkbox::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--lime);
+}
+
+#checkbox:checked::before {
+    transform: scale(1);
+}
+
+.checkbox-label {
+    color: var(--lilac);
+    margin: 0 .25rem 0 .5rem;
+}
+
+.submit,
+.submit span {
+    background: none;
+    border: none;
+    color: var(--lime);
+    letter-spacing: .24rem;
+    padding: 0;
+}
+
+#submit:hover {
+    text-shadow: 0 0 10px var(--lime);
+}
+
+#submit span:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.curve {
+    background-color: var(--lime);
+    overflow: hidden;
+    text-align: center;
+    margin: 5.25rem 0 0 0;
+}
+
+
+.offices-text {
+    margin: 0 3.4rem;
+}
+
+#contacts-section {
+    margin: 9.75rem 0;
+    position: relative;
+}
+
+#contacts-section::after,
+#contacts-section::before {
+    content: "";
+    position: absolute;
+    height: 200vw;
+    width: 200vw;
+    left: -51.125vw;
+    background-color: var(--aubergine);
+    border-radius: 50%;
+}
+
+#contacts-section::before {
+    bottom: 675px;
+}
+
+#contacts-section::after {
+    top: 675px;
+}
+
+.titles {
+    color: var(--lilac);
+    position: relative;
+    z-index: 100;
+}
+
+#contacts-section * {
+    color: var(--aubergine);
+}
+
+
+
+.contacts-div li {
+    margin: 0 0 .75rem 0;
+}
+
+.pink::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 35vw;
+    opacity: .3;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background: var(--pink);
+    filter: blur(100px);
+    transform: matrix(0.96, 0.28, 0.28, -0.96, 0, 0);
+    z-index: 2;
+}
+
+.pink {
+    position: relative;
+}
+
+hr {
+    width: 100vw;
+    border-color: var(--light-lilac);
+    opacity: .25;
+    margin: 5.25rem 0 0 0;
+}
+
+.footer {
+    padding: 5rem 0 5rem 1.75rem;
+}
+
+.footer * {
+    color: var(--lilac);
+}
+
+.home-rotated {
+    transform: rotate(270deg);
+    margin-right: .75rem;
+}
+
+.tomorrow-div {
+    display: flex;
+}
+
+.copyright {
+    margin: 0;
+    padding: 0 0 .75rem 0;
+}
+
+.grid {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: 35% auto;
+    grid-template-rows: auto auto;
+    row-gap: 0.625rem;
+    column-gap: 2.5rem;
+}
+
+.socials-div a:hover {
+    color: var(--lime);
+}
+
+
+@media screen and (min-width: 700px) {
+
+    .work-title {
+        text-align: start;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    #verify-submit-section .font-1 {
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+
+    .font-3 {
+        margin: 0 0 1rem 0;
+    }
+
+    .font-4 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+
+    #credentials-section {
+        display: grid;
+        grid-template-columns: 50% auto;
+        margin: 0 10rem 0 2.5rem;
+        column-gap: 1rem;
+        row-gap: 1rem;
+    }
+
+    #services-section {
+        margin: 3rem 2rem 5rem 2rem;
+    }
+
+    .option {
+        margin: .5rem .625rem;
+    }
+
+    #details {
+        height: 5rem;
+    }
+
+    #info-section {
+        margin: 0 2.5rem;
+    }
+
+    #info-section .field {
+        margin-bottom: 3rem;
+    }
+
+    #verify-submit-section {
+        margin: 0 4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .verify-div {
+        margin: 0;
+    }
+
+    .separator {
+        margin: 0 0 15rem 0;
+    }
+
+    #contacts-section {
+        display: grid;
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: auto auto;
+        row-gap: 1rem;
+        align-items: top;
+        justify-content: space-around;
+        padding: 0 10vw;
+        text-align: start;
+    }
+
+    #contacts-section::before {
+        bottom: 250px;
+    }
+
+    #contacts-section::after {
+        top: 250px;
+    }
+
+
+
+    .offices-text {
+        margin: 0;
+    }
+
+    .contacts-div {
+        grid-row: 1/3;
+        grid-column: 3;
+    }
+
+    .email-div {
+        grid-row: 1;
+        grid-column: 2;
+
+    }
+
+    .footer {
+        padding: 5rem 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .socials-div {
+        display: flex;
+        margin-top: .5rem;
+    }
+
+    .grid {
+        order: 1;
+        margin: 0 0 0 2.5rem;
+    }
+
+    .email-link {
+        align-self: end;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+}
